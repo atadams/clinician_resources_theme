@@ -74,3 +74,5 @@ client_secrets.json
 *py-oauth2.json
 .mypy_cache/
 .vscode
+prepros.config
+/dist/**/package.json
