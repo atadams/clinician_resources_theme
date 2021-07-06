@@ -24,6 +24,7 @@
     text-decoration: none;
     &:hover {
       color: $breadcrumb-hover-color;
+      text-decoration: underline;
     }
   }
 }
