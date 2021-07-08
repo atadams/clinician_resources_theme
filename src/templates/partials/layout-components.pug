@@ -14,11 +14,11 @@ doctype html
 html(lang="en")
 
   //- head.pug template
-  include head 
-  
+  include head
+
   // Body
   body
-    
+
     main.container-fluid.px-xl-4.pb-3.pb-lg-4
 
       // Main content
@@ -45,7 +45,7 @@ html(lang="en")
             a(href='#' target='_blank' rel='noopener').btn.btn-primary.ms-lg-3
               i.fi-cart.me-2.d-none.d-sm-inline-block.fs-lg
               | Buy now
-          
+
           // Side navigation (Offcanvas)
           aside#componentsNav.offcanvas.offcanvas-start.offcanvas-expand.bg-dark
             .offcanvas-header.d-none.d-lg-block.pt-3.pb-4.bg-dark
@@ -112,6 +112,8 @@ html(lang="en")
                   | Form group
                 a(href='gallery.html')&attributes(pageTitle === 'Gallery' ? {'class': 'nav-link fs-sm active'} : {'class': 'nav-link fs-sm'})
                   | Gallery
+                a(href='hero-image.html')&attributes(pageTitle === 'Hero image' ? {'class': 'nav-link fs-sm active'} : {'class': 'nav-link fs-sm'})
+                  | Hero image
                 a(href='input-group.html')&attributes(pageTitle === 'Input group' ? {'class': 'nav-link fs-sm active'} : {'class': 'nav-link fs-sm'})
                   | Input group
                 a(href='icon-box.html')&attributes(pageTitle === 'Icon box' ? {'class': 'nav-link fs-sm active'} : {'class': 'nav-link fs-sm'})
@@ -152,7 +154,7 @@ html(lang="en")
                   | Toasts
                 a(href='tooltips.html')&attributes(pageTitle === 'Tooltips' ? {'class': 'nav-link fs-sm active'} : {'class': 'nav-link fs-sm'})
                   | Tooltips
-              hr.text-light.opacity-15.mx-n4.mt-4 
+              hr.text-light.opacity-15.mx-n4.mt-4
               h6.fs-base.text-light.mx-n4.mb-1.pt-4.pb-2.px-4 Utilities
               nav.nav.nav-light
                 a(href='https://getbootstrap.com/docs/5.0/utilities/background/' target='_blank' rel='noopener').nav-link.fs-sm
@@ -174,10 +176,10 @@ html(lang="en")
                 .ps-md-4.mb-3
                   span.badge.bg-success Finder component
 
-          
+
           block content
 
-        
+
         if anchorNav.length
           // Quick (anchor) navigation
           .col-xl-3.d-none.d-xl-block.ps-4.ps-xxl-5
@@ -193,8 +195,8 @@ html(lang="en")
     // Back to top button
     a(href='#top' data-scroll).btn-scroll-top
       span.btn-scroll-top-tooltip.text-muted.fs-sm.me-2 Top
-      i.btn-scroll-top-icon.fi-chevron-up    
-    
+      i.btn-scroll-top-icon.fi-chevron-up
+
     // Vendor scripts: js libraries and plugins
     +vendor-scripts
 
