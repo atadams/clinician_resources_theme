@@ -1,0 +1,11 @@
+.lead-wrapper {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-top: 3px solid #ff5d37;
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

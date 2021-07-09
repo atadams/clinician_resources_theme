@@ -7,11 +7,11 @@ append config
   - var pageTitle = 'Typography'
   - var pageSubtitle = 'Headings, body text, lists, blockquotes and more.'
   - var pageTitleLink = {'title': 'Bootstrap docs', 'link': 'https://getbootstrap.com/docs/5.0/content/typography/'}
-  - var anchorNav = [{'title': 'Headings', 'link': '#type-headings'}, {'title': 'Display headings', 'link': '#type-displays'}, {'title': 'Body text sizes', 'link': '#type-body-text'}, {'title': 'Inline text elements', 'link': '#type-inline'}, {'title': 'Abbreviations', 'link': '#type-abbreviations'}, {'title': 'Blockquote', 'link': '#type-blockquote'}, {'title': 'Lists: Unordered and ordered', 'link': '#type-lists'}, {'title': 'Lists: Unstyled', 'link': '#type-lists-unstyled'}, {'title': 'Lists: Inline', 'link': '#type-lists-inline'}, {'title': 'Description list basic example', 'link': '#type-description-list'}, {'title': 'Description list alignment', 'link': '#type-description-list-align'}]
-  
+  - var anchorNav = [{'title': 'Headings', 'link': '#type-headings'}, {'title': 'Display headings', 'link': '#type-displays'}, {'title': 'Lead', 'link': '#type-lead'}, {'title': 'Body text sizes', 'link': '#type-body-text'}, {'title': 'Inline text elements', 'link': '#type-inline'}, {'title': 'Abbreviations', 'link': '#type-abbreviations'}, {'title': 'Blockquote', 'link': '#type-blockquote'}, {'title': 'Lists: Unordered and ordered', 'link': '#type-lists'}, {'title': 'Lists: Unstyled', 'link': '#type-lists-unstyled'}, {'title': 'Lists: Inline', 'link': '#type-lists-inline'}, {'title': 'Description list basic example', 'link': '#type-description-list'}, {'title': 'Description list alignment', 'link': '#type-description-list-align'}]
+
 //- Page Content
 block content
-  
+
   // Headings
   section#type-headings.pb-5.mb-md-2
     h2.h5.mb-3 Headings
@@ -58,7 +58,7 @@ block content
                 h4 h4. Finder heading
                 h5 h5. Finder heading
                 h6 h6. Finder heading
-  
+
   // Display headings
   section#type-displays.pb-5.mb-md-2
     h2.h5.mb-3 Display headings
@@ -105,7 +105,41 @@ block content
                 h1.display-4 Display 4
                 h1.display-5 Display 5
                 h1.display-6 Display 6
-  
+  // Lead
+    // Body text sizes
+  section#type-lead.pb-5.mb-md-2
+    h2.h5.mb-3 Lead
+    .card.border-0.shadow-sm
+      .card-header
+        ul(role='tablist').nav.nav-tabs.card-header-tabs
+          li.nav-item
+            a(href='#result3b' data-bs-toggle='tab' role='tab' aria-controls='result3b' aria-selected='true').nav-link.active Result
+          li.nav-item
+            a(href='#html3b' data-bs-toggle='tab' role='tab' aria-controls='html3b' aria-selected='false').nav-link HTML
+          li.nav-item
+            a(href='#pug3b' data-bs-toggle='tab' role='tab' aria-controls='pug3b' aria-selected='false').nav-link Pug
+      .card-body
+        .tab-content
+          #result3b.tab-pane.fade.show.active(role='tabpanel')
+            .lead-wrapper
+              p
+                | Libero habitant fames massa vulputate aptent ante morbi, diam ullamcorper a cum velit class nec tortor, blandit vehicula dolor lectus dictum imperdiet.
+              p
+                | Accumsan eu dictumst suscipit molestie sapien venenatis, quisque praesent eleifend augue mus, torquent primis senectus mattis suspendisse.
+          #html3b.tab-pane.fade(role='tabpanel')
+            pre.line-numbers
+              code(class='lang-html').
+                &lt;div class=&quot;lead-wrapper&quot;&gt;
+                  &lt;p&gt;Libero habitant fames massa vulputate aptent ante morbi, diam ullamcorper a cum velit class nec tortor, blandit vehicula dolor lectus dictum imperdiet.&lt;/p&gt;
+                  &lt;p&gt;Accumsan eu dictumst suscipit molestie sapien venenatis, quisque praesent eleifend augue mus, torquent primis senectus mattis suspendisse.&lt;/p&gt;
+                &lt;/div&gt;
+          #pug3b.tab-pane.fade(role='tabpanel')
+            pre.line-numbers
+              code(class='lang-pug').
+                .lead-wrapper
+                  p Libero habitant fames massa vulputate aptent ante morbi, diam ullamcorper a cum velit class nec tortor, blandit vehicula dolor lectus dictum imperdiet.
+                  p Accumsan eu dictumst suscipit molestie sapien venenatis, quisque praesent eleifend augue mus, torquent primis senectus mattis suspendisse.
+
   // Body text sizes
   section#type-body-text.pb-5.mb-md-2
     h2.h5.mb-3 Body text sizes
@@ -139,10 +173,10 @@ block content
             p.fs-6
               strong fs-6.&nbsp;
               | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
-            p.lead 
+            p.lead
               strong Lead.&nbsp;
               | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
-            p.fs-lg 
+            p.fs-lg
               strong Large.&nbsp;
               | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
             p
@@ -177,7 +211,7 @@ block content
                 p.fs-sm Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
                 p.fs-xs Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
                 p.fs-xxs Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor
-    
+
   // Inline text elements
   section#type-inline.pb-5.mb-md-2
     h2.h5.mb-3 Inline text elements
@@ -243,7 +277,7 @@ block content
                   em This line rendered as italicized text.
                 p
                   a(href=&quot;#&quot;) Inline link
-  
+
   // Abbreviations
   section#type-abbreviations.pb-5.mb-md-2
     h2.h5.mb-3 Abbreviations
@@ -277,7 +311,7 @@ block content
                   abbr(title=&quot;attribute&quot;) attr
                 p
                   abbr.initialism(title=&quot;HyperText Markup Language&quot;) HTML
-  
+
   // Blockquote
   section#type-blockquote.pb-5.mb-md-2
     h2.h5.mb-3 Blockquote
@@ -312,7 +346,7 @@ block content
                     Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
                   &lt;/footer&gt;
                 &lt;/blockquote&gt;
-                
+
                 &lt;!-- Blockquote: center aligned --&gt;
                 &lt;blockquote class=&quot;blockquote text-center&quot;&gt;
                   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
@@ -320,7 +354,7 @@ block content
                     Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
                   &lt;/footer&gt;
                 &lt;/blockquote&gt;
-                
+
                 &lt;!-- Blockquote: right aligned --&gt;
                 &lt;blockquote class=&quot;blockquote text-end&quot;&gt;
                   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
@@ -335,17 +369,17 @@ block content
                 blockquote.blockquote
                   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
                   footer.blockquote-footer Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
-                
+
                 // Blockquote: center aligned
                 blockquote.blockquote.text-center
                   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
                   footer.blockquote-footer Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
-                
+
                 // Blockquote: right aligned
                 blockquote.blockquote.text-end
                   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
                   footer.blockquote-footer Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
-  
+
   // Lists: Unordered and ordered
   section#type-lists.pb-5.mb-md-2
     h2.h5.mb-3 Lists: Unordered and ordered
@@ -414,7 +448,7 @@ block content
                   li Integer molestie lorem at massa
                   li Facilisis in pretium nisl aliquet
                   li Nulla volutpat aliquam velit
-  
+
   // Lists: Unstyled
   section#type-lists-unstyled.pb-5.mb-md-2
     h2.h5.mb-3 Lists: Unstyled
@@ -471,7 +505,7 @@ block content
                       li Vestibulum laoreet porttitor sem
                   li Faucibus porta lacus fringilla vel
                   li Aenean sit amet erat nunc
-  
+
   // Lists: Inline
   section#type-lists-inline.pb-5.mb-md-2
     h2.h5.mb-3 Lists: Inline
@@ -508,7 +542,7 @@ block content
                   li.list-inline-item Lorem ipsum dolor
                   li.list-inline-item Consectetur adipiscing
                   li.list-inline-item Integer molestie
-  
+
   // Description list basic example
   section#type-description-list.pb-5.mb-md-2
     h2.h5.mb-3 Description list basic example
@@ -554,7 +588,7 @@ block content
                   dd Etiam porta sem malesuada magna mollis euismod.
                   dt Euismod
                   dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-  
+
   // Description list alignment
   section#type-description-list-align.pb-5.mb-md-2
     h2.h5.mb-3 Description list alignment
