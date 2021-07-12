@@ -4794,7 +4794,7 @@ fieldset:disabled .btn {
   flex-wrap: wrap;
   padding: 0 0;
   margin-bottom: 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   list-style: none;
   background-color: transparent;
 }
