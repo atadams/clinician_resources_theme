@@ -23,3 +23,9 @@ a.card-channel {
 .card-status {
   margin-bottom: 1rem;
 }
+
+.card-img-container {
+  background-size: 100%;
+  background-position: center;
+  object-fit: cover;
+}

@@ -1,0 +1,92 @@
+extends ../partials/layout-components
+
+//- Override default config variables
+append config
+  - var vendorStyles = ['prismjs/themes/prism.css', 'prismjs/plugins/toolbar/prism-toolbar.css', 'prismjs/plugins/line-numbers/prism-line-numbers.css']
+  - var vendorScripts = ['prismjs/components/prism-core.min.js', 'prismjs/components/prism-markup.min.js', 'prismjs/components/prism-clike.min.js', 'prismjs/components/prism-javascript.min.js', 'prismjs/components/prism-pug.min.js', 'prismjs/plugins/toolbar/prism-toolbar.min.js', 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js', 'prismjs/plugins/line-numbers/prism-line-numbers.min.js']
+  - var pageTitle = 'Items list'
+  - var pageSubtitle = 'A list of items, e.g. news'
+  - var anchorNav = [{'title': 'Items list', 'link': '#items-list'}]
+
+//- Page Content
+block content
+
+  // Items list
+  section#items-list.pb-5.mb-md-2
+    h2.h5.mb-3 Items list
+    .card.border-0.shadow-sm
+      .card-header
+        ul(role='tablist').nav.nav-tabs.card-header-tabs
+          li.nav-item
+            a(href='#result1' data-bs-toggle='tab' role='tab' aria-controls='result1' aria-selected='true').nav-link.active Result
+          li.nav-item
+            a(href='#html1' data-bs-toggle='tab' role='tab' aria-controls='html1' aria-selected='false').nav-link HTML
+      .card-body
+        .tab-content
+          #result1.tab-pane.fade.show.active(role='tabpanel')
+            .items-list
+              .item
+                .card
+                  .row
+                    .col-md-4.card-img-container(style='background-image: url(../img/components/img-02.jpg);')
+                    .col-md-8
+                      .card-body
+                        h5.card-title
+                          a(href='#2').stretched-link Primer on Telemedicine Series now available
+              .item
+                .card
+                  .row
+                    .col-md-4.card-img-container(style='background-image: url(../img/components/img-01.jpg);')
+                    .col-md-8
+                      .card-body
+                        h5.card-title
+                          a(href='#1').stretched-link CME Opportunities
+              .item
+                .card
+                  .row
+                    .col-md-4.card-img-container(style='background-image: url(../img/components/img-03.jpg);')
+                    .col-md-8
+                      .card-body
+                        h5.card-title
+                          a(href='#3').stretched-link Optimization of Health before Surgery: Lessons from the ACS Strong for Surgery Program and Rethinking Clinical Care
+          #html1.tab-pane.fade(role='tabpanel')
+            pre.line-numbers
+              code(class='lang-html')
+                &lt;div class=&quot;items-list&quot;&gt;
+                  &lt;div class=&quot;item&quot;&gt;
+                    &lt;div class=&quot;card&quot;&gt;
+                      &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-md-4 card-img-container&quot; style=&quot;background-image: url(../img/components/img-02.jpg);&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;col-md-8&quot;&gt;
+                          &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h5 class=&quot;card-title&quot;&gt;&lt;a class=&quot;stretched-link&quot; href=&quot;#2&quot;&gt;Primer on Telemedicine Series now available&lt;/a&gt;&lt;/h5&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;item&quot;&gt;
+                    &lt;div class=&quot;card&quot;&gt;
+                      &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-md-4 card-img-container&quot; style=&quot;background-image: url(../img/components/img-01.jpg);&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;col-md-8&quot;&gt;
+                          &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h5 class=&quot;card-title&quot;&gt;&lt;a class=&quot;stretched-link&quot; href=&quot;#1&quot;&gt;CME Opportunities&lt;/a&gt;&lt;/h5&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;item&quot;&gt;
+                    &lt;div class=&quot;card&quot;&gt;
+                      &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-md-4 card-img-container&quot; style=&quot;background-image: url(../img/components/img-03.jpg);&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;col-md-8&quot;&gt;
+                          &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;h5 class=&quot;card-title&quot;&gt;&lt;a class=&quot;stretched-link&quot; href=&quot;#3&quot;&gt;Optimization of Health before Surgery: Lessons from the ACS Strong for Surgery Program and Rethinking Clinical Care&lt;/a&gt;&lt;/h5&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
