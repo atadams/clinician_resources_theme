@@ -1,4 +1,4 @@
-// 
+//
 // user-variables.scss
 // Use this to override Bootstrap and Finder variables
 //
@@ -6,3 +6,1091 @@
 // Example of a variable override to change Finder background color
 // Remove the "//" to comment it in and see it in action!
 // $body-bg: #12263F;
+
+//
+// Variables
+// --------------------------------------------------
+
+
+// Import Bootstrap functions to use inside variables values
+@import '../../dist/vendor/bootstrap/scss/functions';
+
+
+//== Colors
+//
+// Gray and brand colors to use across the Theme.
+
+// Grayscale
+$white:                 #fff;
+$gray-100:              #f9f8fa;
+$gray-200:              #f5f4f8;
+$gray-300:              #efecf3;
+$gray-400:              #d5d2dc;
+$gray-500:              #bbb7c5;
+$gray-600:              #9691a4;
+$gray-700:            	#666276;
+$gray-800:              #454056;
+$gray-900:              #1f1b2d;
+$black:                 #000;
+
+$brand-dark: #2b2d42;
+
+$blue: #1c3079;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #a61d37;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #60d8ca;
+$cyan: #01adde;
+
+// Brand colors
+$primary:               $blue;
+$accent:                #5d3cf2;
+$secondary:             $gray-600;
+$info:                  $cyan;
+$success:               $green;
+$warning:               $yellow;
+$danger:                $red;
+$light:                 #eefbf9;
+$dark:                  $brand-dark;
+
+// Modifying default Bootstrap's $theme-colors map
+$theme-colors: (
+  'primary':    $primary,
+  'accent':     $accent,
+  'secondary':  $secondary,
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark
+);
+
+// Faded colors map
+$theme-faded-colors: (
+  'primary':    rgba($primary, .1),
+  'accent':     rgba($accent, .1),
+  "success":    rgba($success, .1),
+  "info":       rgba($info, .1),
+  "warning":    rgba($warning, .15),
+  "danger":     rgba($danger, .1),
+  "light":      rgba($light, .04),
+  "dark":       rgba($dark, .1)
+);
+
+
+// Gradient
+$gradient-from-color:   $accent;
+$gradient-to-color:     $primary;
+$gradient:              linear-gradient(26.21deg, $gradient-from-color 0%, $gradient-to-color 108.88%);
+
+
+// User selection color
+$user-selection-color:  rgba($accent, .15);
+
+
+// Options
+//
+// Modifying Bootstrap global options
+
+$enable-caret:                false;
+$enable-shadows:              true;
+$enable-negative-margins:     true;
+$enable-smooth-scroll:        false;
+
+
+// Spacing
+
+$spacer: 1rem;
+
+// Spacing between columns
+$grid-gutter-width:     1.5rem;
+
+
+// Override grid breaakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+// Override grid containers
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 100%,
+  xxl: 1320px
+);
+
+
+
+// Body
+
+$body-color:            $gray-900;
+$body-bg:               $white;
+$text-muted:            $gray-600;
+
+
+// Links
+
+$link-color:            $primary;
+$link-decoration:       underline;
+$link-shade-percentage:                   20%;
+$link-hover-color:      #7f91ca;
+$link-hover-decoration: underline;
+$link-transition:       color .2s ease-in-out;
+$emphasized-link-hover-darken-percentage: 0%;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-width:                1px;
+$border-color:                $gray-300;
+$border-light-color:          rgba($white, .15);
+
+$border-radius-sm:            .375rem;
+$border-radius:               .5rem  ;
+$border-radius-lg:            .75rem ;
+$border-radius-xl:            1.875rem;
+$border-radius-pill:          50rem;
+
+
+$box-shadow:                  0 .125rem .5rem -.25rem rgba($gray-900, .12),
+                              0 .25rem 1rem rgba($gray-900, .12);
+
+$box-shadow-lg:               0 .25rem .75rem -.375rem rgba($gray-900, .2),
+                              0 .5rem 1rem rgba($gray-900, .16);
+
+$box-shadow-sm:               0 .125rem .125rem -.125rem rgba($gray-900, .08),
+                              0 .25rem .75rem rgba($gray-900, .08);
+
+$box-shadow-hover:            0 .25rem .75rem -.375rem rgba($primary, .2),
+                              0 .5rem 1rem rgba($primary, .16);
+$box-shadow-inset:            inset 0 1px 2px transparent;
+
+
+// Z-index master list
+
+$zindex-btn-scroll-top:        1025;
+$zindex-offcanvas:             1080;
+$zindex-lightbox-backdrop:     1100;
+$zindex-lightbox-content:      1110;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$path-to-fonts:               'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap';
+$font-family-sans-serif:      'Noto Sans', sans-serif;
+$headings-color:              #031a6d;
+
+$font-size-base:              1rem;
+$font-size-lg:                ($font-size-base * 1.25);
+$font-size-sm:                ($font-size-base * .875);
+$font-size-xs:                ($font-size-base * .75);
+$font-size-xxs:               ($font-size-base * .625);
+
+$font-weight-bold:            700;
+
+$line-height-base:            1.5;
+$line-height-lg:              2;
+$line-height-sm:              1.25;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base * 1.125 ;
+
+// Modifying default Bootstrap's $font-sizes map
+$font-sizes: (
+  1:      $h1-font-size,
+  2:      $h2-font-size,
+  3:      $h3-font-size,
+  4:      $h4-font-size,
+  5:      $h5-font-size,
+  6:      $h6-font-size,
+  'lg':   $font-size-lg,
+  'base': $font-size-base,
+  'sm':   $font-size-sm,
+  'xs':   $font-size-xs,
+  'xxs':  $font-size-xxs
+);
+
+$h1-line-height:              1.2;
+$h2-line-height:              1.25;
+$h3-line-height:              1.3;
+$h4-line-height:              1.35;
+$h5-line-height:              1.4;
+$h6-line-height:              1.4;
+
+$headings-margin-bottom:      $spacer;
+$headings-font-weight:        $font-weight-bold;
+$paragraph-margin-bottom:     ($spacer * 1.25);
+
+// Modifying default Bootstrap's $display-font-sizes map
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.625rem
+);
+
+$display-font-weight:         $headings-font-weight;
+
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            normal;
+
+$text-shadow:                 0 .0625rem rgba($black, .5);
+
+
+// Blockquote
+$blockquote-margin-y:         $spacer * 1.25;
+$blockquote-font-size:        $font-size-base * 1.125;
+$blockquote-color:            $gray-900;
+$blockquote-font-weight:      $font-weight-bold;
+$blockquote-footer-color:     $gray-900;
+$blockquote-footer-font-size: $font-size-base;
+$blockquote-icon-size:        $font-size-base * 3;
+$blockquote-icon-color:       $primary;
+
+
+// hr
+$hr-margin-y:                 0;
+$hr-color:                    $border-color;
+$hr-light-color:              $border-light-color;
+$hr-opacity:                  1;
+
+
+// Icons
+
+$icons-font-path:             '../fonts';
+$icons-font-family:           'finder-icons';
+
+
+// Tables
+
+$table-cell-padding-y:        .75rem;
+$table-cell-padding-x:        .75rem;
+$table-cell-padding-y-sm:     .375rem;
+$table-cell-padding-x-sm:     .375rem;
+
+$table-dark-color:            rgba($white, .75);
+
+$table-th-color:              $headings-color;
+$table-th-font-weight:        $headings-font-weight;
+
+$table-striped-bg-factor:     .0375;
+$table-active-bg-factor:      .05;
+$table-hover-bg-factor:       .05;
+
+$table-bg-scale:              -90%;
+
+// Modifying default Bootstrap's $table-variants map
+$table-variants: (
+  'primary':    shift-color($primary, $table-bg-scale),
+  'accent':     shift-color($accent, $table-bg-scale),
+  'secondary':  $gray-100,
+  'success':    shift-color($success, $table-bg-scale),
+  'info':       shift-color($info, $table-bg-scale),
+  'warning':    shift-color($warning, $table-bg-scale),
+  'danger':     shift-color($danger, $table-bg-scale),
+  'dark':       $dark,
+  'light':      $light
+);
+
+
+// Buttons + Forms
+
+$input-btn-padding-y:         .575rem;
+$input-btn-padding-x:         1.5rem;
+$input-btn-font-size:         $font-size-base;
+
+$input-btn-padding-y-sm:      .425rem;
+$input-btn-padding-x-sm:      1rem;
+$input-btn-font-size-sm:      $font-size-sm;
+$input-btn-line-height-sm:    $line-height-sm;
+
+$input-btn-padding-y-lg:      .825rem;
+$input-btn-padding-x-lg:      1.75rem;
+$input-btn-font-size-lg:      $font-size-base;
+$input-btn-line-height-lg:    $line-height-base;
+
+$input-btn-focus-width:       .125rem;
+
+$input-btn-disabled-color:    $gray-600;
+
+
+// Buttons
+
+$btn-color:                   $white;
+$btn-font-weight:             bold;
+$btn-white-space:             nowrap;
+$btn-focus-width:             0;
+
+$btn-box-shadow:              unset;
+$btn-focus-box-shadow:        unset;
+$btn-active-box-shadow:       unset;
+
+
+$btn-font-size-lg:            $font-size-base;
+$btn-font-size-xs:            $font-size-xs;
+
+$btn-padding-y-xs:            .375rem;
+$btn-padding-x-xs:            .875rem;
+
+$btn-link-color:              $gray-700;
+$btn-link-hover-color:        $primary;
+$btn-link-decoration:         none;
+$btn-link-hover-decoration:   none;
+
+$btn-link-light-color:        rgba($white, .7);
+$btn-link-light-hover-color:  $white;
+
+$btn-border-radius-lg:        $border-radius;
+$btn-border-radius-xs:        $border-radius-sm;
+
+$btn-transition:              color .2s ease-in-out, background-color .2s ease-in-out,
+                              border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+
+// Icon buttons
+
+$btn-icon-size:               2.75rem;
+$btn-icon-sm-size:            2.25rem;
+$btn-icon-xs-size:            2rem;
+$btn-icon-xxs-size:           1.5rem;
+
+
+// Market buttons
+
+$btn-market-padding-y:              .65em;
+$btn-market-padding-x:              1.125em;
+
+$btn-market-size:                   $font-size-base;
+
+$btn-market-border-radius:          $border-radius;
+$btn-market-border-radius-sm:       $border-radius;
+$btn-market-border-radius-lg:       $border-radius-sm;
+
+$btn-market-box-shadow:             $box-shadow-lg;
+
+$btn-market-border-width:           $border-width;
+$btn-market-border-color:           $gray-900;
+
+$btn-market-bg:                     linear-gradient(180deg, rgba($gray-800, .765) 0%, rgba($gray-800, .9) 100%);
+
+
+// Scroll to top button
+
+$btn-scroll-top-size:               2.75rem;
+$btn-scroll-top-icon-font-size:     $font-size-sm;
+$btn-scroll-top-bg:                 rgba($gray-900, .25);
+$btn-scroll-top-hover-bg:           rgba($gray-900, .5);
+$btn-scroll-top-color:              $white;
+$btn-scroll-top-hover-color:        $white;
+$btn-scroll-top-transition:         right 400ms cubic-bezier(.68, -.55, .265, 1.55), opacity .3s, background-color .25s ease-in-out;
+
+
+// Like / dislike buttons
+
+$btn-like-dislike-color:            $gray-600;
+$btn-like-dislike-light-color:      rgba($white, .7);
+$btn-like-dislike-font-size:        $font-size-sm;
+$btn-like-dislike-icon-size:        $font-size-base * 1.125;
+$btn-like-dislike-transition:       color .25s ease-in-out;
+
+$btn-like-hover-color:              $success;
+$btn-like-active-color:             $success;
+
+$btn-dislike-hover-color:           $danger;
+$btn-dislike-active-color:          $danger;
+
+
+// Close
+
+$close-font-size:                   $font-size-base * 1.75;
+$close-font-weight:                 normal;
+$close-color:                       $black;
+$close-text-shadow:                 none;
+
+
+// Forms
+
+$form-label-margin-bottom:          .375rem;
+$form-label-font-size:              $font-size-base;
+$form-label-color:                  $headings-color;
+
+$input-bg:                          $white;
+$input-color:                       $gray-800;
+$input-border-color:                $gray-400;
+
+$input-padding-x:                   1.125rem;
+$input-padding-x-sm:                $input-btn-padding-x-sm;
+$input-padding-x-lg:                1.25rem;
+
+$input-border-radius-lg:            $border-radius;
+
+$input-transition:                  background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+// Light version
+$input-light-bg:                            rgba($white, .04);
+$input-light-focus-bg:                      rgba($white, .08);
+$input-light-disabled-bg:                   rgba($white, .1);
+$input-light-disabled-opacity:              .5;
+
+$input-light-border-color:                  rgba($white, .12);
+$input-light-focus-border-color:            rgba($white, .23);
+$input-light-focus-box-shadow:              unset;
+
+$input-light-color:                         $white;
+$input-light-focus-color:                   $gray-800;
+$input-light-disabled-color:                rgba($white, .5);
+
+$input-light-placeholder-color:             rgba($white, .5);
+$input-light-focus-placeholder-color:       $gray-600;
+$input-light-disabled-placeholder-color:    rgba($white, .3);
+
+// Select
+$form-select-indicator-padding:             $input-padding-x * 2.25; // Extra padding for background-image
+
+$form-select-light-indicator-color:         rgba($white, .6);
+$form-select-light-indicator-focus-color:   $white!default;
+
+$form-select-light-indicator:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-light-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+$form-select-light-focus-indicator:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-light-indicator-focus-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+
+// Checkboxes & radios
+$form-check-label-color:                        $body-color;
+$form-check-margin-bottom:                      .375rem;
+$form-check-input-active-filter:                0;
+$form-check-input-bg:                           transparent;
+$form-check-input-border-color:                 $gray-500;
+$form-check-input-border:                       2px solid $form-check-input-border-color;
+$form-check-input-border-radius:                .1875em;
+$form-check-input-checked-color:                $primary;
+$form-check-input-checked-bg-color:             transparent;
+$form-check-input-checked-border-color:         $primary;
+$form-check-input-focus-box-shadow:             0;
+$form-check-label-light-color:                  $white;
+$form-check-input-light-bg:                     transparent;
+$form-check-input-light-border-color:           rgba($white, .5);
+$form-check-input-light-focus-border-color:     rgba($white, .5);
+$form-check-input-light-checked-border-color:   $primary;
+
+// Switches
+$form-switch-color:                             $white;
+$form-switch-height:                            1.125rem;
+$form-switch-focus-color:                       $form-switch-color;
+$form-switch-bg:                                darken($input-border-color, 3%);
+$form-switch-checked-bg:                        $success;
+$form-switch-light-bg:                          rgba($white, .15);
+$form-switch-light-checked-bg:                  $success;
+$form-switch-light-color:                       $white;
+
+// Range
+$form-range-thumb-bg:                           $primary;
+$form-range-thumb-active-bg:                    darken($form-range-thumb-bg, 9%);
+
+// Form validation
+$form-feedback-font-size:                       $font-size-xs;
+$form-feedback-valid-color:                     $success;
+$form-feedback-invalid-color:                   $danger;
+$form-feedback-icon-valid-color:                $form-feedback-valid-color;
+$form-feedback-icon-invalid-color:              $form-feedback-invalid-color;
+$form-feedback-icon-valid:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'><path fill-rule='evenodd' d='M9 3a6 6 0 1 0 0 12A6 6 0 1 0 9 3zM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0zm10.28-2.03a.75.75 0 0 1 0 1.061l-3 3a.75.75 0 0 1-1.061 0l-1.5-1.5A.75.75 0 0 1 7.28 8.47l.97.97 2.47-2.47a.75.75 0 0 1 1.061 0z' fill='#{$form-feedback-icon-valid-color}' fill-opacity='.6'/></svg>");
+$form-feedback-icon-invalid:                    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='#{$form-feedback-icon-invalid-color}' fill-rule='evenodd'><path d='M9 3a6 6 0 1 0 0 12A6 6 0 1 0 9 3zM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 1 1-15 0zM9 5.25a.75.75 0 0 1 .75.75v3a.75.75 0 1 1-1.5 0V6A.75.75 0 0 1 9 5.25zM8.25 12a.75.75 0 0 1 .75-.75h.008a.75.75 0 1 1 0 1.5H9a.75.75 0 0 1-.75-.75z'/></svg>");
+
+$form-feedback-tooltip-font-size:     $form-feedback-font-size;
+$form-feedback-tooltip-valid-color:   $form-feedback-valid-color;
+$form-feedback-tooltip-invalid-color: $form-feedback-invalid-color;
+$form-feedback-tooltip-valid-bg:      map-get($theme-faded-colors, 'success');
+$form-feedback-tooltip-invalid-bg:    map-get($theme-faded-colors, 'danger');
+$form-feedback-tooltip-border-radius: $border-radius-sm;
+
+
+// Input group
+
+$input-group-addon-bg:                $input-bg;
+$input-group-addon-color:             $gray-700;
+
+
+// Range slider
+
+$range-slider-height:                 .25rem;
+$range-slider-bg:                     lighten($gray-400, 5%);
+$range-slider-light-bg:               rgba($white, .2);
+$range-slider-connect-bg:             $primary;
+$range-slider-handle-size:            1.125rem;
+$range-slider-handle-bg:              $primary;
+$range-slider-tooltip-font-size:      $font-size-xs;
+$range-slider-tooltip-bg:             $white;
+$range-slider-tooltip-color:          $gray-800;
+
+
+// Form group
+
+$form-group-padding:                  .5rem;
+$form-group-bg:                       $white;
+$form-group-border-width:             $border-width;
+$form-group-border-color:             $border-color;
+$form-group-border-radius:            $border-radius;
+$form-group-box-shadow:               $box-shadow-sm;
+
+$form-group-light-bg:                 map-get($theme-faded-colors, 'light');
+$form-group-light-border-color:       $border-light-color;
+
+
+// Navs
+
+$nav-link-transition:                 color .25s ease-in-out,
+                                      background-color .25s ease-in-out,
+                                      box-shadow .25s ease-in-out,
+                                      border-color .25s ease-in-out;
+
+$nav-link-font-weight:                bold;
+$nav-link-color:                      $gray-800;
+$nav-link-hover-color:                $primary;
+$nav-link-active-color:               $primary;
+$nav-link-disabled-color:             $gray-600;
+
+$nav-link-light-color:                rgba($white, .65);
+$nav-link-light-hover-color:          $white;
+$nav-link-light-active-color:         $white;
+$nav-link-light-disabled-color:       rgba($white, .4);
+
+$nav-link-muted-color:                $gray-700;
+$nav-link-muted-hover-color:          $gray-800;
+$nav-link-muted-active-color:         $gray-800;
+
+
+// Tabs
+
+$nav-tabs-border-color:               transparent;
+
+$nav-tabs-link-bg:                    $gray-200;
+$nav-tabs-link-box-shadow:            none;
+$nav-tabs-link-color:                 $nav-link-color;
+$nav-tabs-link-font-weight:           normal;
+
+$nav-tabs-link-hover-border-color:    $nav-tabs-border-color;
+$nav-tabs-link-hover-color:           $gray-900;
+$nav-tabs-link-hover-box-shadow:      $box-shadow-sm;
+
+$nav-tabs-link-active-border-color:   transparent;
+$nav-tabs-link-active-bg:             $white;
+$nav-tabs-link-active-color:          $primary;
+$nav-tabs-link-active-box-shadow:     $nav-tabs-link-hover-box-shadow;
+
+$nav-tabs-link-disabled-bg:           $gray-100;
+
+$nav-tabs-light-link-bg:              rgba($white, .04);
+$nav-tabs-light-link-color:           $white;
+
+$nav-tabs-light-link-hover-bg:        rgba($white, .1);
+$nav-tabs-light-link-hover-color:     $white;
+
+$nav-tabs-light-link-active-bg:       $white;
+$nav-tabs-light-link-active-color:    $primary;
+
+
+// Pills
+
+$nav-pills-border-radius:                 $border-radius-pill;
+
+$nav-pills-link-bg:                       $gray-200;
+$nav-pills-link-box-shadow:               none;
+$nav-pills-link-font-weight:              400;
+
+$nav-pills-link-hover-bg:                 $gray-200;
+$nav-pills-link-hover-color:              $nav-link-color;
+$nav-pills-link-hover-box-shadow:         $box-shadow-sm;
+
+$nav-pills-link-active-bg:                $white;
+$nav-pills-link-active-color:             $primary;
+$nav-pills-link-active-box-shadow:        $box-shadow-sm;
+
+$nav-pills-link-disabled-bg:              rgba($gray-200, .5);
+$nav-pills-link-disabled-color:           rgba($gray-800, .5);
+
+$nav-pills-light-link-bg:                  rgba($white, .04);
+$nav-pills-light-link-color:               $white;
+
+$nav-pills-light-link-hover-bg:            rgba($white, .1);
+$nav-pills-light-link-hover-color:         $white;
+
+$nav-pills-light-link-active-bg:           $white;
+$nav-pills-light-link-active-color:        $primary;
+
+$nav-pills-light-link-disabled-bg:         rgba($white, .05);
+$nav-pills-light-link-disabled-color:      rgba($white, .35);
+
+
+// Navbar
+
+$navbar-padding-y:                    $spacer;
+$navbar-transition:                   background-color .1s ease-in-out, box-shadow .1s ease-in-out;
+
+$navbar-nav-link-padding-y:           .6875rem;
+$navbar-nav-link-padding-x:           1rem;
+$navbar-nav-link-font-size:           $font-size-base * .875;
+
+$navbar-brand-padding-y:              0;
+$navbar-brand-font-size:              $h4-font-size;
+$navbar-brand-font-weight:            $font-weight-bold;
+
+$navbar-toggler-padding-y:            .5rem;
+$navbar-toggler-padding-x:            .75rem;
+$navbar-toggler-font-size:            $font-size-base;
+$navbar-toggler-border-radius:        0;
+
+$navbar-light-color:                  $nav-link-color;
+$navbar-light-hover-color:            $nav-link-hover-color;
+$navbar-light-active-color:           $nav-link-active-color;
+$navbar-light-disabled-color:         $gray-600;
+$navbar-light-toggler-border-color:   transparent;
+$navbar-light-brand-color:            $gray-900;
+$navbar-light-brand-hover-color:      $navbar-light-brand-color;
+
+$navbar-dark-color:                   $nav-link-light-color;
+$navbar-dark-hover-color:             $nav-link-light-hover-color;
+$navbar-dark-active-color:            $nav-link-light-active-color;
+$navbar-dark-disabled-color:          $nav-link-light-disabled-color;
+$navbar-dark-toggler-border-color:    transparent;
+$navbar-dark-brand-color:             $white;
+$navbar-dark-brand-hover-color:       $navbar-dark-brand-color;
+
+
+// Breadcrumb
+
+$breadcrumb-padding-x:                    0;
+$breadcrumb-font-size:                    $font-size-base;
+$breadcrumb-bg:                           transparent;
+$breadcrumb-item-padding-x:               .625rem;
+$breadcrumb-divider:                      quote("\e952");
+$breadcrumb-divider-flipped:              quote("\e951");
+
+$breadcrumb-color:                        $link-color;
+$breadcrumb-hover-color:                  $gray-800;
+$breadcrumb-active-color:                 $primary;
+$breadcrumb-divider-color:                $gray-600;
+
+$breadcrumb-light-color:                  rgba($white, .5);
+$breadcrumb-light-hover-color:            rgba($white, .75);
+$breadcrumb-light-active-color:           $white;
+$breadcrumb-light-divider-color:          rgba($white, .5);
+
+
+// Offcanvas
+
+$offcanvas-horizontal-width:        21rem;
+$offcanvas-padding-y:               $spacer * 1.25;
+$offcanvas-padding-x:               $spacer * 1.5;
+$offcanvas-border-color:            transparent;
+$offcanvas-border-width:            0;
+$offcanvas-bg-color:                $white;
+$offcanvas-box-shadow:              $box-shadow-lg;
+$offcanvas-title-line-height:       initial;
+
+
+
+// Custom scrollbar
+
+$scrollbar-width:                   .1875rem;
+$scrollbar-border-radius:           $border-radius;
+$scrollbar-track-bg:                $gray-200;
+$scrollbar-bg:                      $gray-400;
+$scrollbar-light-track-bg:          rgba($white, .2);
+$scrollbar-light-bg:                rgba($white, .35);
+
+
+// Code
+
+$code-color:                        #e3116c;
+
+$pre-color:                         $white;
+$pre-bg:                            $gray-900;
+
+$pre-line-numbers-border-width:     $border-width;
+$pre-line-numbers-border-color:     $border-light-color;
+$pre-line-numbers-color:            rgba($white, .4);
+
+
+// Alerts
+
+$alert-bg-scale:                    -90%;
+$alert-border-scale:                -65%;
+$alert-color-scale:                 -100%;
+
+
+// Cards
+
+$card-spacer-y:                     1.25rem;
+$card-spacer-x:                     1.25rem;
+
+$card-border-radius:                0;
+$card-border-color:                 $border-color;
+
+$card-cap-padding-y:                $card-spacer-y / 1.25;
+$card-cap-bg:                       transparent;
+$card-transition:                   border-color .2s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out;
+$card-horizontal-image-width:       39%;
+$card-horizontal-image-min-height:  12rem;
+
+$card-light-border-color:           $border-light-color;
+$card-light-bg:                     map-get($theme-faded-colors, 'light');
+$card-light-color:                  $light;
+
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-base * .75;
+$tooltip-border-radius:             $border-radius-sm;
+
+
+// Badges
+
+$badge-font-size:                   .8125em;
+$badge-font-weight:                 normal;
+$badge-padding-y:                   .4375em;
+$badge-padding-x:                   .75em;
+$badge-border-radius:               $border-radius-sm;
+
+$badge-floating-offset-y:           $spacer / 2;
+$badge-floating-offset-x:           $spacer / 2;
+
+
+// List group
+
+$list-group-color:                  $gray-800;
+$list-group-border-color:           rgba($black, .08);
+$list-group-border-radius:          $border-radius-lg;
+$list-group-item-padding-y:         $spacer * .75;
+$list-group-item-padding-x:         $spacer;
+
+$list-group-item-bg-scale:          -85%;
+$list-group-item-color-scale:       0;
+
+$list-group-hover-bg:               transparent;
+
+$list-group-action-active-bg:       transparent;
+$list-group-action-active-color:    $primary;
+$list-group-action-hover-color:     $primary;
+$list-group-action-transition:      color .25s ease-in-out, background-color .25s ease-in-out;
+
+
+// Image thumbnails
+
+$thumbnail-padding:             .375rem;
+$thumbnail-border-radius:       $border-radius-lg;
+
+
+// Dropdown
+
+$dropdown-min-width:            10rem;
+$dropdown-border-color:         $border-color;
+$dropdown-divider-bg:           $border-color;
+$dropdown-divider-margin-y:     .375rem;
+$dropdown-divider-margin-x:     1rem;
+$dropdown-box-shadow:           $box-shadow-sm;
+$dropdown-border-radius:        $border-radius-lg;
+
+$dropdown-spacer:               0;
+
+$dropdown-item-padding-y:       .375rem;
+$dropdown-item-padding-x:       1rem;
+$dropdown-item-font-size:       $font-size-sm;
+$dropdown-item-icon-size:       $font-size-base;
+
+$dropdown-font-size:            $font-size-sm;
+
+$dropdown-header-color:         $headings-color;
+$dropdown-header-font-size:     $font-size-base;
+
+$dropdown-link-color:           $gray-800;
+$dropdown-link-hover-color:     $primary;
+$dropdown-link-hover-bg:        transparent;
+$dropdown-link-active-color:    $primary;
+$dropdown-link-active-bg:       transparent;
+$dropdown-link-disabled-color:  $gray-600;
+$dropdown-link-transition:      all .2s ease-in-out;
+
+$dropdown-dark-color:               $nav-link-light-color;
+$dropdown-dark-border-color:        $border-light-color;
+$dropdown-dark-bg:                  $gray-900;
+$dropdown-dark-divider-bg:          $border-light-color;
+$dropdown-dark-box-shadow:          none;
+$dropdown-dark-link-color:          $dropdown-dark-color;
+$dropdown-dark-link-hover-bg:       transparent;
+$dropdown-dark-link-hover-color:    $nav-link-light-hover-color;
+$dropdown-dark-link-active-color:   $nav-link-light-active-color;
+$dropdown-dark-link-active-bg:      transparent;
+$dropdown-dark-link-disabled-color: rgba($white, .4);
+$dropdown-dark-header-color:        $white;
+
+
+// Progress
+
+$progress-bg:                       $gray-300;
+$progress-border-radius:            $border-radius-sm;
+$progress-box-shadow:               none;
+$progress-light-bg:                 rgba(white, .15);
+
+
+// Pagination
+
+$pagination-padding-y:                    0;
+$pagination-padding-x:                    .475rem;
+$pagination-padding-y-sm:                 $pagination-padding-y;
+$pagination-padding-x-sm:                 .4rem;
+$pagination-padding-y-lg:                 $pagination-padding-y;
+$pagination-padding-x-lg:                 .55rem;
+
+$pagination-color:                        $gray-800;
+$pagination-bg:                           transparent;
+$pagination-border-color:                 transparent;
+
+$pagination-focus-box-shadow:             none;
+$pagination-focus-bg:                     transparent;
+
+$pagination-hover-color:                  $primary;
+$pagination-hover-bg:                     transparent;
+$pagination-hover-border-color:           transparent;
+
+$pagination-active-color:                 $white;
+$pagination-active-bg:                    $primary;
+$pagination-active-border-color:          transparent;
+$pagination-active-border-radius:         50%;
+$pagination-active-font-weight:           bold;
+
+$pagination-disabled-color:               rgba($pagination-color, .4);
+$pagination-disabled-bg:                  transparent;
+$pagination-disabled-border-color:        transparent;
+
+// Light version
+$pagination-light-color:                  rgba($white, .7);
+$pagination-light-bg:                     transparent;
+$pagination-light-border-color:           transparent;
+
+$pagination-light-focus-box-shadow:       none;
+
+$pagination-light-hover-color:            $white;
+$pagination-light-hover-bg:               transparent;
+$pagination-light-hover-border-color:     transparent;
+
+$pagination-light-active-color:           $primary;
+$pagination-light-active-bg:              $white;
+$pagination-light-active-border-color:    transparent;
+
+$pagination-light-disabled-color:         rgba($pagination-light-color, .3);
+$pagination-light-disabled-bg:            transparent;
+$pagination-light-disabled-border-color:  transparent;
+
+
+// Popovers
+
+$popover-bg:                    $white;
+$popover-border-color:          $border-color;
+$popover-arrow-outer-color:     $popover-border-color;
+$popover-box-shadow:            $box-shadow-sm;
+$popover-border-radius:         $border-radius-lg;
+$popover-header-bg:             $white;
+$popover-header-color:          $headings-color;
+$popover-header-padding-y:      .75rem;
+$popover-header-padding-x:      1rem;
+$popover-header-font-size:      $font-size-base;
+$popover-body-font-size:        $font-size-sm;
+
+
+// Modal
+
+$modal-inner-padding:            $spacer * 1.125;
+
+$modal-header-padding-y:         1rem;
+$modal-header-padding-x:         $spacer * 1.125;
+
+$modal-backdrop-bg:              darken($gray-900, 10%);
+$modal-backdrop-opacity:         .6;
+
+$modal-content-border-color:     $border-color;
+$modal-content-box-shadow-xs:    $box-shadow-sm;
+$modal-content-box-shadow-sm-up: $modal-content-box-shadow-xs;
+
+$modal-footer-margin-between:    .75rem;
+$modal-fade-transform:           scale(.9);
+$modal-transition:               transform .2s ease-out;
+
+
+// Spinners
+
+$spinner-border-width:                .15em;
+$spinner-border-width-sm:             .1em;
+
+
+// Close
+
+$btn-close-width:                     .75em;
+$btn-close-focus-shadow:              none;
+$btn-close-transition:                opacity .25s ease-in-out;
+
+
+// Carousel
+
+$carousel-controls-size:                  2.25rem;
+$carousel-controls-font-size:             $font-size-xs;
+$carousel-controls-color:                 $gray-800;
+$carousel-controls-bg:                    $white;
+$carousel-controls-hover-color:           $primary;
+$carousel-controls-hover-box-shadow:      $box-shadow;
+$carousel-controls-box-shadow:            $box-shadow-sm;
+$carousel-controls-transition:            all .3s ease-in-out;
+
+$carousel-controls-light-color:           $white;
+$carousel-controls-light-bg:              rgba($white, .04);
+$carousel-controls-light-hover-color:     $primary;
+$carousel-controls-light-hover-bg:        $white;
+
+$carousel-nav-width:                      1rem;
+$carousel-nav-height:                     .375rem;
+$carousel-nav-bg:                         rgba($gray-700, .4);
+$carousel-nav-active-bg:                  $gray-700;
+$carousel-nav-light-bg:                   rgba($white, .4);
+$carousel-nav-light-active-bg:            $white;
+
+$carousel-thumbnails-spacing:             $spacer * .875;
+$carousel-thumbnail-width:                20%;
+$carousel-thumbnail-border-radius:        $border-radius;
+$carousel-thumbnail-border-width:         $border-width;
+$carousel-thumbnail-border-color:         transparent;
+$carousel-thumbnail-active-border-color:  $primary;
+$carousel-thumbnail-opacity:              .6;
+$carousel-thumbnail-hover-opacity:        1;
+$carousel-thumbnail-active-opacity:       1;
+$carousel-thumbnail-transition:           opacity .2s ease-in-out, border-color .2s ease-in-out;
+
+
+
+// Icon box
+
+$icon-box-media-font-size:            1.5rem;
+$icon-box-media-width:                3rem;
+$icon-box-media-border-radius:        $border-radius;
+$icon-box-media-transition:           background-color .22s ease-in-out, color .22s ease-in-out;
+
+$icon-box-title-color:                $headings-color;
+
+
+$icon-box-offset-y:                   $spacer;
+$icon-box-padding:                    .5em;
+$icon-box-border-radius:              50%;
+$icon-box-title-font-size:            $font-size-base;
+
+$icon-box-shadow:                     $box-shadow-sm;
+$icon-box-hover-shadow:               $box-shadow;
+
+$icon-box-card-padding-y:             $card-spacer-y;
+$icon-box-card-padding-x:             $card-spacer-x;
+
+$icon-box-pill-padding:               .5rem;
+$icon-box-pill-border-radius:         2.5rem;
+$icon-box-pill-title-offset-x:        $spacer * .75;
+
+
+// Accordion
+
+$accordion-padding-x:                     1rem;
+$accordion-border-radius:                 $border-radius-lg;
+$accordion-border-color:                  $border-color;
+
+$accordion-button-color:                  $gray-800;
+$accordion-button-font-weight:            bold;
+
+$accordion-button-active-bg:              transparent;
+$accordion-button-active-color:           $primary;
+$accordion-button-focus-border-color:     $accordion-border-color;
+
+$accordion-light-bg:                      transparent;
+$accordion-light-color:                   rgba($white, .7);
+$accordion-light-border-color:            $border-light-color;
+
+$accordion-light-button-color:            $accordion-light-color;
+$accordion-light-button-active-bg:        transparent;
+$accordion-light-button-active-color:     $white;
+
+$accordion-icon-width:                    1rem;
+$accordion-light-icon-color:              $accordion-light-color;
+$accordion-light-icon-active-color:       $accordion-light-button-active-color;
+
+$accordion-light-button-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-light-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-light-button-active-icon:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-light-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+
+// Star rating
+
+$star-rating-icon-size:                   .875rem;
+$star-rating-sm-icon-size:                .6875rem;
+$star-rating-icon-color:                  $gray-500;
+$star-rating-light-icon-color:            rgba($white, .5);
+$star-rating-icon-active-color:           $warning;
+
+
+// Gallery
+
+$gallery-indicator-size:                  2.875rem;
+
+$gallery-image-indicator-color:           $white;
+$gallery-image-indicator-font-size:       $font-size-base * 1.75;
+
+$gallery-video-indicator-bg:              $white;
+$gallery-video-indicator-color:           $gray-800;
+$gallery-video-indicator-font-size:       $font-size-base * .5625;
+$gallery-video-indicator-box-shadow:      0 .375rem 1rem -.25rem rgba($black,.2);
+
+$gallery-overlay-bg:                      rgba($gray-900, .5);
+$gallery-caption-color:                   $white;
+$gallery-caption-font-size:               $font-size-sm;
+
+
+// Steps
+
+$step-progress-height:                    .25rem;
+$step-progress-bg:                        darken($gray-500, 2%);
+
+$step-number-size:                        2rem;
+$step-number-font-size:                   $font-size-base;
+$step-number-font-weight:                 $font-weight-bold;
+$step-number-border-radius:               50%;
+$step-number-bg:                          $white;
+$step-number-color:                       $body-color;
+$step-number-box-shadow:                  $box-shadow-sm;
+$step-number-transition:                  background-color .25s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out!default;
+
+$step-label-color:                        $body-color;
+$step-label-font-size:                    $font-size-xs;
+
+$step-light-progress-bg:                  rgba($white, .5);
+$step-light-number-bg:                    darken($gray-800, 7%);
+$step-light-number-color:                 $white;
+$step-light-label-color:                  rgba($white, .7);
+
+$step-active-progress-bg:                 $primary;
+$step-acitve-number-bg:                   $primary;
+$step-acitve-number-color:                $white;
+$step-acitve-box-shadow:                  $box-shadow-hover;
