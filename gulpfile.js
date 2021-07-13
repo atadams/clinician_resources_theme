@@ -1,5 +1,5 @@
 const gulp = require('gulp'),
-      rollup = require('gulp-rollup'),  
+      rollup = require('gulp-rollup'),
       gulpif = require('gulp-if'),
       del = require('del'),
       rename = require('gulp-rename'),
@@ -22,10 +22,12 @@ const path = {
   dist: 'dist',
   src_pug: 'src/templates',
   src_scss: 'src/scss',
+  src_fonts: 'src/fonts',
   src_js: 'src/js',
   dist_vendor: 'dist/vendor',
   dist_js: 'dist/js',
-  dist_css: 'dist/css'
+  dist_css: 'dist/css',
+  dist_fonts: 'dist/fonts'
 }
 
 
@@ -80,7 +82,7 @@ gulp.task('js:expanded', () => {
          * Finder | Directory & Listings Bootstrap Template
          * Copyright 2021 Createx Studio
          * Theme core scripts
-         * 
+         *
          * @author Createx Studio
          * @version 1.0.0
          */
@@ -106,7 +108,7 @@ gulp.task('js:minified', () => {
          * Finder | Directory & Listings Bootstrap Template
          * Copyright 2021 Createx Studio
          * Theme core scripts
-         * 
+         *
          * @author Createx Studio
          * @version 1.0.0
          */
@@ -122,6 +124,13 @@ gulp.task('js:minified', () => {
     .on('end', () => {
       reload(); // One time browser reload at end of uglification (minification)
     });
+});
+
+
+// Fonts
+gulp.task('fonts', function() {
+  return gulp.src(path.src_fonts + '/*.{eot,svg,ttf,woff,woff2}')
+          .pipe(gulp.dest('dist/fonts/'));
 });
 
 
@@ -172,6 +181,7 @@ gulp.task('clean', () => {
   return del([
     path.dist_css,
     path.dist_js,
+    path.dist_fonts,
     path.dist + '/components',
     path.dist + '/docs',
     path.dist + '/*.html',
@@ -205,5 +215,5 @@ gulp.task('watch', () => {
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
+  gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded', 'fonts'), 'watch')
 );

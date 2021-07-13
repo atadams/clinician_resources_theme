@@ -27,6 +27,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^5.0.2",
     "cleave.js": "^1.6.0",
     "filepond": "^4.27.1",

@@ -8,7 +8,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * Finder | Directory & Listings Bootstrap Template
  * Copyright 2021 Createx Studio
  * Theme core scripts
- * 
+ *
  * @author Createx Studio
  * @version 1.0.0
  */
